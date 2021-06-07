@@ -1,0 +1,112 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Textures/Platforms.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/Level5.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Ladder.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Doors.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Textures/Painting2.png" type="Texture" id=9]
+[ext_resource path="res://Textures/Painting1.png" type="Texture" id=10]
+[ext_resource path="res://Textures/Table.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Battery.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Bars.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Lever.tscn" type="PackedScene" id=14]
+
+[node name="Level2" type="Node2D"]
+script = ExtResource( 4 )
+next_level = "res://Scenes/Level3.tscn"
+current_level = "res://Scenes/Level2.tscn"
+
+[node name="ColorRect" parent="." instance=ExtResource( 1 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 480.0
+margin_bottom = 270.0
+
+[node name="Battery" parent="." instance=ExtResource( 12 )]
+position = Vector2( 309.477, 197.984 )
+
+[node name="Key" parent="." instance=ExtResource( 8 )]
+position = Vector2( 59.5, 198.5 )
+
+[node name="Doors" parent="." instance=ExtResource( 7 )]
+position = Vector2( 335.25, 22.5 )
+
+[node name="Lever" parent="." instance=ExtResource( 14 )]
+position = Vector2( 166.878, 202.028 )
+
+[node name="Bars" parent="." instance=ExtResource( 13 )]
+position = Vector2( 133.908, 184.979 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 131073, 0, 0, 131074, 0, 2, 131092, 0, 0, 131093, 0, 2, 196609, 0, 65536, 196610, 0, 65538, 196628, 0, 65536, 196629, 0, 65538, 262145, 0, 65536, 262146, 0, 65538, 262164, 0, 65536, 262165, 0, 65538, 327681, 0, 65536, 327682, 0, 65538, 327700, 0, 65536, 327701, 0, 65538, 393217, 0, 65536, 393218, 0, 65538, 393231, 0, 0, 393232, 0, 1, 393233, 0, 1, 393234, 0, 1, 393235, 0, 1, 393236, 0, 131078, 393237, 0, 65538, 458753, 0, 65536, 458754, 0, 131077, 458755, 0, 1, 458756, 0, 1, 458757, 0, 1, 458758, 0, 1, 458759, 0, 1, 458760, 0, 1, 458761, 0, 1, 458762, 0, 1, 458763, 0, 1, 458764, 0, 1, 458765, 0, 2, 458767, 0, 65536, 458768, 0, 65537, 458769, 0, 65537, 458770, 0, 65537, 458771, 0, 65537, 458772, 0, 65537, 458773, 0, 65538, 524289, 0, 65536, 524290, 0, 65541, 524291, 0, 131073, 524292, 0, 131073, 524293, 0, 131073, 524294, 0, 131073, 524295, 0, 65542, 524296, 0, 65541, 524297, 0, 131073, 524298, 0, 131073, 524299, 0, 131073, 524300, 0, 131073, 524301, 0, 131074, 524303, 0, 131072, 524304, 0, 131073, 524305, 0, 131073, 524306, 0, 131073, 524307, 0, 131073, 524308, 0, 65542, 524309, 0, 65538, 589825, 0, 65536, 589826, 0, 65538, 589831, 0, 65536, 589832, 0, 65538, 589844, 0, 65536, 589845, 0, 65538, 655361, 0, 65536, 655362, 0, 65538, 655367, 0, 131072, 655368, 0, 131074, 655380, 0, 65536, 655381, 0, 65538, 720897, 0, 65536, 720898, 0, 65538, 720916, 0, 65536, 720917, 0, 65538, 786433, 0, 65536, 786434, 0, 65538, 786452, 0, 65536, 786453, 0, 65538, 851969, 0, 65536, 851970, 0, 131077, 851971, 0, 1, 851972, 0, 1, 851973, 0, 1, 851974, 0, 1, 851975, 0, 1, 851976, 0, 1, 851977, 0, 1, 851978, 0, 1, 851979, 0, 1, 851980, 0, 1, 851981, 0, 1, 851982, 0, 1, 851983, 0, 1, 851984, 0, 1, 851985, 0, 1, 851986, 0, 1, 851987, 0, 1, 851988, 0, 131078, 851989, 0, 65538, 917505, 0, 131072, 917506, 0, 131073, 917507, 0, 131073, 917508, 0, 131073, 917509, 0, 131073, 917510, 0, 131073, 917511, 0, 131073, 917512, 0, 131073, 917513, 0, 131073, 917514, 0, 131073, 917515, 0, 131073, 917516, 0, 131073, 917517, 0, 131073, 917518, 0, 131073, 917519, 0, 131073, 917520, 0, 131073, 917521, 0, 131073, 917522, 0, 131073, 917523, 0, 131073, 917524, 0, 131073, 917525, 0, 131074 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.603922, 0.603922, 0.603922, 1 )
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Ladders" type="Node2D" parent="."]
+
+[node name="Ladder" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 232, 120 )
+
+[node name="Ladder2" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 232, 136 )
+
+[node name="Ladder3" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 232, 152 )
+
+[node name="Ladder4" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 232, 168 )
+
+[node name="Ladder5" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 232, 184 )
+
+[node name="Ladder6" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 232, 200 )
+
+[node name="Ladder7" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 232, 104 )
+
+[node name="Ladder8" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 312, 88 )
+
+[node name="Ladder9" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 312, 72 )
+
+[node name="Ladder10" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 312, 56 )
+
+[node name="Ladder11" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 312, 40 )
+
+[node name="Ladder12" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 312, 24 )
+
+[node name="Ladder13" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 232, 88 )
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Table" type="Sprite" parent="Objects"]
+position = Vector2( 201.707, 196.224 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 11 )
+
+[node name="Painting2" type="Sprite" parent="Objects"]
+position = Vector2( 272, 184 )
+texture = ExtResource( 9 )
+
+[node name="Painting1" type="Sprite" parent="Objects"]
+position = Vector2( 72, 88 )
+texture = ExtResource( 10 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 112.457, 96.8814 )

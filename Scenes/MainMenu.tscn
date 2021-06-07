@@ -1,0 +1,248 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://RaubFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Textures/light.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "back"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 270 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "credits"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 270 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "tutorial"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 480, 0 ) ]
+}
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 480.0
+margin_bottom = 270.0
+color = Color( 0.164706, 0.164706, 0.164706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 480.0
+margin_right = 960.0
+margin_bottom = 270.0
+color = Color( 0.164706, 0.164706, 0.164706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_top = 270.0
+margin_right = 480.0
+margin_bottom = 540.0
+color = Color( 0.164706, 0.164706, 0.164706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 115.625
+margin_top = 46.2498
+margin_right = 194.625
+margin_bottom = 62.2498
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = SubResource( 1 )
+text = "Darkness"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 168.0
+margin_top = 136.0
+margin_right = 279.0
+margin_bottom = 158.0
+custom_fonts/font = SubResource( 2 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 168.0
+margin_top = 168.0
+margin_right = 279.0
+margin_bottom = 190.0
+custom_fonts/font = SubResource( 2 )
+text = "Tutorial"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="."]
+margin_left = 640.0
+margin_top = 216.0
+margin_right = 784.0
+margin_bottom = 238.0
+custom_fonts/font = SubResource( 2 )
+text = "Start Tutorial"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 168.0
+margin_top = 200.0
+margin_right = 279.0
+margin_bottom = 222.0
+custom_fonts/font = SubResource( 3 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.490196, 0.490196, 0.490196, 1 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 448, 216 )
+texture = ExtResource( 2 )
+energy = 0.85
+
+[node name="Light2D4" type="Light2D" parent="."]
+position = Vector2( 960, 136 )
+texture = ExtResource( 2 )
+energy = 0.85
+
+[node name="Light2D2" type="Light2D" parent="."]
+position = Vector2( 34.487, 39.8384 )
+texture = ExtResource( 2 )
+energy = 0.85
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 169.405
+margin_top = 476.665
+margin_right = 280.405
+margin_bottom = 498.665
+custom_fonts/font = SubResource( 4 )
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 104.0
+margin_top = 288.0
+margin_right = 408.0
+margin_bottom = 494.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 5 )
+text = "Game made by Un3derC0ver
+
+Platforms form oubliette tileset
+made by safwyl
+
+sounds from mixkit and soundbible
+
+music from main menu by z3r0
+
+Font made by Chinafreak
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 496.0
+margin_top = 16.0
+margin_right = 1051.0
+margin_bottom = 241.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 5 )
+text = "The most important thing in this game is 
+taking care about your mental health.
+
+if smaller bar will end your Mental health will be decreasing.
+Only when you use flashlight it gets a little better.
+
+
+Controls:
+
+Use WSAD or arrows to move.
+Press and hold LMB to turn on the flashlight
+use \"R\" to restart level"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+anims/back = SubResource( 6 )
+anims/credits = SubResource( 7 )
+anims/tutorial = SubResource( 8 )
+
+[node name="Light2D3" type="Light2D" parent="."]
+position = Vector2( 79.0443, 498.652 )
+texture = ExtResource( 2 )
+energy = 0.85
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]

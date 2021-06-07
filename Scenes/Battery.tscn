@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Textures/Battery.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Battery.gd" type="Script" id=2]
+[ext_resource path="res://mixkit-video-game-retro-click-237.wav" type="AudioStream" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.53896, 5.06925 )
+
+[node name="Battery" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+pitch_scale = 0.78
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.561865, 0.889621 )
+shape = SubResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_Battery_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_AudioStreamPlayer2D_finished"]

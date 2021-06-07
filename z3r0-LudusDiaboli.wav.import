@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/z3r0-LudusDiaboli.wav-395848e92c9a62448547677cbbb2271d.sample"
+
+[deps]
+
+source_file="res://z3r0-LudusDiaboli.wav"
+dest_files=[ "res://.import/z3r0-LudusDiaboli.wav-395848e92c9a62448547677cbbb2271d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,167 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scenes/Level5.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Textures/Platforms.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/Doors.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Battery.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Lever.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Bars.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Ladder.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Textures/Table.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Painting2.png" type="Texture" id=13]
+
+[node name="Level4" type="Node2D"]
+script = ExtResource( 1 )
+next_level = "res://Scenes/Level5.tscn"
+current_level = "res://Scenes/Level4.tscn"
+
+[node name="ColorRect" parent="." instance=ExtResource( 11 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 480.0
+margin_bottom = 270.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 96, 192 )
+
+[node name="Painting2" type="Sprite" parent="."]
+position = Vector2( 288, 136 )
+scale = Vector2( 2.5, 2 )
+texture = ExtResource( 13 )
+
+[node name="Table" type="Sprite" parent="."]
+position = Vector2( 144, 200 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 12 )
+
+[node name="Key" parent="." instance=ExtResource( 6 )]
+position = Vector2( 406.756, 168.214 )
+
+[node name="HUD" parent="." instance=ExtResource( 5 )]
+
+[node name="Doors" parent="." instance=ExtResource( 4 )]
+position = Vector2( 208, 86.5284 )
+
+[node name="Bars" parent="." instance=ExtResource( 9 )]
+position = Vector2( 347.474, 184.161 )
+
+[node name="Lever" parent="." instance=ExtResource( 8 )]
+position = Vector2( 407.388, 74.845 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 131074, 0, 0, 131075, 0, 2, 131098, 0, 0, 131099, 0, 2, 196610, 0, 65536, 196611, 0, 65538, 196626, 0, 3, 196634, 0, 65536, 196635, 0, 65538, 262146, 0, 65536, 262147, 0, 65538, 262162, 0, 65539, 262170, 0, 65536, 262171, 0, 65538, 327682, 0, 65536, 327683, 0, 65538, 327698, 0, 65539, 327705, 0, 0, 327706, 0, 131078, 327707, 0, 65538, 393218, 0, 65536, 393219, 0, 65538, 393228, 0, 0, 393229, 0, 2, 393231, 0, 196608, 393232, 0, 196609, 393233, 0, 196609, 393234, 0, 196615, 393241, 0, 65536, 393242, 0, 65537, 393243, 0, 65538, 458754, 0, 65536, 458755, 0, 65538, 458764, 0, 65536, 458765, 0, 65538, 458777, 0, 131072, 458778, 0, 131073, 458779, 0, 65543, 524290, 0, 65536, 524291, 0, 65538, 524300, 0, 65536, 524301, 0, 131077, 524302, 0, 2, 524315, 0, 65539, 589826, 0, 65536, 589827, 0, 65538, 589836, 0, 65536, 589837, 0, 65537, 589838, 0, 65538, 589845, 0, 0, 589846, 0, 5, 589847, 0, 196609, 589848, 0, 196609, 589849, 0, 196609, 589850, 0, 6, 589851, 0, 131079, 655362, 0, 65536, 655363, 0, 65538, 655372, 0, 65536, 655373, 0, 65537, 655374, 0, 65538, 655381, 0, 131072, 655382, 0, 131074, 655386, 0, 65536, 655387, 0, 65538, 720898, 0, 65536, 720899, 0, 65538, 720908, 0, 65536, 720909, 0, 65537, 720910, 0, 131077, 720911, 0, 2, 720921, 0, 0, 720922, 0, 131078, 720923, 0, 65538, 786434, 0, 65536, 786435, 0, 65538, 786444, 0, 65536, 786445, 0, 65537, 786446, 0, 65537, 786447, 0, 65538, 786457, 0, 65536, 786458, 0, 65537, 786459, 0, 65538, 851970, 0, 65536, 851971, 0, 131077, 851972, 0, 1, 851973, 0, 1, 851974, 0, 1, 851975, 0, 1, 851976, 0, 1, 851977, 0, 1, 851978, 0, 1, 851979, 0, 1, 851980, 0, 131078, 851981, 0, 65537, 851982, 0, 65537, 851983, 0, 131077, 851984, 0, 1, 851985, 0, 1, 851986, 0, 1, 851987, 0, 1, 851988, 0, 1, 851989, 0, 1, 851990, 0, 1, 851991, 0, 1, 851992, 0, 1, 851993, 0, 131078, 851994, 0, 65537, 851995, 0, 65538, 917506, 0, 131072, 917507, 0, 131073, 917508, 0, 131073, 917509, 0, 131073, 917510, 0, 131073, 917511, 0, 131073, 917512, 0, 131073, 917513, 0, 131073, 917514, 0, 131073, 917515, 0, 131073, 917516, 0, 131073, 917517, 0, 131073, 917518, 0, 131073, 917519, 0, 131073, 917520, 0, 131073, 917521, 0, 131073, 917522, 0, 131073, 917523, 0, 131073, 917524, 0, 131073, 917525, 0, 131073, 917526, 0, 131073, 917527, 0, 131073, 917528, 0, 131073, 917529, 0, 131073, 917530, 0, 131073, 917531, 0, 131074 )
+
+[node name="Battery" type="Node2D" parent="."]
+
+[node name="Battery" parent="Battery" instance=ExtResource( 7 )]
+position = Vector2( 279.099, 87.591 )
+
+[node name="Battery3" parent="Battery" instance=ExtResource( 7 )]
+position = Vector2( 424.538, 135.7 )
+
+[node name="Battery4" parent="Battery" instance=ExtResource( 7 )]
+position = Vector2( 74.2152, 198.788 )
+
+[node name="Ladders" type="Node2D" parent="."]
+
+[node name="Ladder" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 184, 200 )
+
+[node name="Ladder2" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 184, 184 )
+
+[node name="Ladder3" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 184, 168 )
+
+[node name="Ladder4" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 184, 152 )
+
+[node name="Ladder5" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 184, 136 )
+
+[node name="Ladder6" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 184, 120 )
+
+[node name="Ladder7" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 184, 104 )
+
+[node name="Ladder8" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 184, 88 )
+
+[node name="Ladder9" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 232, 88 )
+
+[node name="Ladder10" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 232, 104 )
+
+[node name="Ladder11" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 232, 120 )
+
+[node name="Ladder12" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 248, 120 )
+
+[node name="Ladder13" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 248, 136 )
+
+[node name="Ladder14" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 248, 152 )
+
+[node name="Ladder15" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 248, 168 )
+
+[node name="Ladder16" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 264, 168 )
+
+[node name="Ladder17" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 264, 184 )
+
+[node name="Ladder18" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 264, 200 )
+
+[node name="Ladder19" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 328, 200 )
+
+[node name="Ladder20" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 328, 184 )
+
+[node name="Ladder21" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 328, 168 )
+
+[node name="Ladder22" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 328, 152 )
+
+[node name="Ladder23" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 328, 136 )
+
+[node name="Ladder24" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 392, 136 )
+
+[node name="Ladder25" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 392, 120 )
+
+[node name="Ladder26" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 392, 104 )
+
+[node name="Ladder27" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 392, 88 )
+
+[node name="Ladder28" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 392, 72 )
+
+[node name="Ladder29" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 392, 200 )
+
+[node name="Ladder30" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 392, 184 )
+
+[node name="Ladder31" parent="Ladders" instance=ExtResource( 10 )]
+position = Vector2( 392, 168 )

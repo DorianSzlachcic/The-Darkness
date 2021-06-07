@@ -1,0 +1,143 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Textures/Platforms.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Battery.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Doors.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Lever.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Bars.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Ladder.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Level5.gd" type="Script" id=11]
+[ext_resource path="res://Textures/Painting1.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Table.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Painting2.png" type="Texture" id=14]
+
+[node name="Level5" type="Node2D"]
+script = ExtResource( 11 )
+next_level = "res://Scenes/Level6.tscn"
+current_level = "res://Scenes/Level5.tscn"
+
+[node name="ColorRect" parent="." instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 480.0
+margin_bottom = 270.0
+
+[node name="Lever" parent="." instance=ExtResource( 6 )]
+position = Vector2( 330.871, 218.285 )
+
+[node name="Key" parent="." instance=ExtResource( 10 )]
+position = Vector2( 64, 216 )
+
+[node name="Battery" type="Node2D" parent="."]
+
+[node name="Battery2" parent="Battery" instance=ExtResource( 4 )]
+position = Vector2( 56, 152 )
+
+[node name="Battery5" parent="Battery" instance=ExtResource( 4 )]
+position = Vector2( 472, 120 )
+
+[node name="Ladders" type="Node2D" parent="."]
+
+[node name="Ladder" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 440, 216 )
+
+[node name="Ladder2" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 440, 200 )
+
+[node name="Ladder3" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 440, 184 )
+
+[node name="Ladder4" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 440, 168 )
+
+[node name="Ladder5" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 440, 152 )
+
+[node name="Ladder6" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 440, 136 )
+
+[node name="Ladder7" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 440, 120 )
+
+[node name="Ladder8" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 440, 104 )
+
+[node name="Ladder9" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 440, 88 )
+
+[node name="Ladder10" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 440, 72 )
+
+[node name="Ladder25" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 408, 72 )
+
+[node name="Ladder26" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 408, 56 )
+
+[node name="Ladder14" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 248, 72 )
+
+[node name="Ladder15" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 248, 88 )
+
+[node name="Ladder16" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 248, 104 )
+
+[node name="Ladder17" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 248, 120 )
+
+[node name="Ladder18" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 248, 136 )
+
+[node name="Ladder19" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 248, 152 )
+
+[node name="Ladder20" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 248, 168 )
+
+[node name="Ladder21" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 248, 184 )
+
+[node name="Ladder22" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 248, 200 )
+
+[node name="Ladder23" parent="Ladders" instance=ExtResource( 9 )]
+position = Vector2( 248, 216 )
+
+[node name="Painting1" type="Sprite" parent="."]
+position = Vector2( 160, 124 )
+scale = Vector2( 2, 1.5 )
+texture = ExtResource( 12 )
+
+[node name="Table" type="Sprite" parent="."]
+position = Vector2( 280, 216 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 13 )
+
+[node name="Painting2" type="Sprite" parent="."]
+position = Vector2( 374, 136 )
+scale = Vector2( 2.25, 2 )
+texture = ExtResource( 14 )
+
+[node name="Doors" parent="." instance=ExtResource( 5 )]
+position = Vector2( 358.652, 215.198 )
+
+[node name="Bars" parent="." instance=ExtResource( 7 )]
+position = Vector2( 208, 200 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -131044, 0, 3, -65508, 0, 65539, 28, 0, 65539, 65564, 0, 65539, 131073, 0, 0, 131074, 0, 2, 131100, 0, 65539, 196609, 0, 65536, 196610, 0, 65538, 196636, 0, 65539, 262145, 0, 65536, 262146, 0, 65538, 262166, 0, 196608, 262167, 0, 196609, 262168, 0, 196610, 262172, 0, 65539, 327681, 0, 65536, 327682, 0, 65538, 327687, 0, 196608, 327688, 0, 196609, 327689, 0, 196609, 327690, 0, 196609, 327691, 0, 196609, 327692, 0, 6, 327693, 0, 5, 327694, 0, 196610, 327696, 0, 196608, 327697, 0, 196609, 327698, 0, 196609, 327699, 0, 196609, 327700, 0, 196610, 327705, 0, 196608, 327706, 0, 7, 327708, 0, 65539, 393217, 0, 65536, 393218, 0, 65538, 393228, 0, 65536, 393229, 0, 65538, 393242, 0, 65539, 393244, 0, 196612, 393245, 0, 196609, 393246, 0, 7, 458753, 0, 65536, 458754, 0, 65538, 458764, 0, 65536, 458765, 0, 65538, 458771, 0, 3, 458778, 0, 65539, 458782, 0, 65539, 524289, 0, 65536, 524290, 0, 65538, 524300, 0, 65536, 524301, 0, 65538, 524307, 0, 65539, 524314, 0, 65539, 524316, 0, 4, 524317, 0, 196609, 524318, 0, 196615, 589825, 0, 65536, 589826, 0, 65538, 589836, 0, 65536, 589837, 0, 65538, 589843, 0, 65539, 589850, 0, 65539, 589852, 0, 65539, 655361, 0, 65536, 655362, 0, 131077, 655363, 0, 1, 655364, 0, 1, 655365, 0, 1, 655366, 0, 1, 655367, 0, 1, 655368, 0, 2, 655372, 0, 65536, 655373, 0, 65538, 655379, 0, 65539, 655386, 0, 65539, 655388, 0, 65539, 720897, 0, 65536, 720898, 0, 65541, 720899, 0, 131073, 720900, 0, 131073, 720901, 0, 131073, 720902, 0, 131073, 720903, 0, 131073, 720904, 0, 131074, 720908, 0, 131072, 720909, 0, 131074, 720915, 0, 65539, 720922, 0, 65539, 720924, 0, 65539, 786433, 0, 65536, 786434, 0, 65538, 786451, 0, 65539, 786458, 0, 131075, 786460, 0, 65539, 851969, 0, 65536, 851970, 0, 65538, 851987, 0, 65539, 851996, 0, 65539, 917505, 0, 65536, 917506, 0, 131077, 917507, 0, 1, 917508, 0, 1, 917509, 0, 1, 917510, 0, 1, 917511, 0, 1, 917512, 0, 1, 917513, 0, 1, 917514, 0, 1, 917515, 0, 1, 917516, 0, 1, 917517, 0, 1, 917518, 0, 1, 917519, 0, 1, 917520, 0, 1, 917521, 0, 1, 917522, 0, 1, 917523, 0, 131080, 917524, 0, 1, 917525, 0, 1, 917526, 0, 1, 917527, 0, 1, 917528, 0, 1, 917529, 0, 1, 917530, 0, 1, 917531, 0, 1, 917532, 0, 131079, 983041, 0, 131072, 983042, 0, 131073, 983043, 0, 131073, 983044, 0, 131073, 983045, 0, 131073, 983046, 0, 131073, 983047, 0, 131073, 983048, 0, 131073, 983049, 0, 131073, 983050, 0, 131073, 983051, 0, 131073, 983052, 0, 131073, 983053, 0, 131073, 983054, 0, 131073, 983055, 0, 131073, 983056, 0, 131073, 983057, 0, 131073, 983058, 0, 131073, 983059, 0, 131073, 983060, 0, 131073, 983061, 0, 131073, 983062, 0, 131073, 983063, 0, 131073, 983064, 0, 131073, 983065, 0, 131073, 983066, 0, 131073, 983067, 0, 131073, 983068, 0, 131074 )
+
+[node name="HUD" parent="." instance=ExtResource( 3 )]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+position = Vector2( 192, 64 )

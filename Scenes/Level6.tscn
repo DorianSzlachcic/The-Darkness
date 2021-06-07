@@ -1,0 +1,142 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scenes/Level5.gd" type="Script" id=1]
+[ext_resource path="res://Textures/Platforms.tres" type="TileSet" id=2]
+[ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Doors.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Ladder.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Bars.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Lever.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Battery.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Textures/Painting1.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Table.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Painting2.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=14]
+
+[node name="Level6" type="Node2D"]
+script = ExtResource( 1 )
+next_level = "res://Scenes/Level7.tscn"
+current_level = "res://Scenes/Level6.tscn"
+
+[node name="ColorRect" parent="." instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 480.0
+margin_bottom = 270.0
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Table" type="Sprite" parent="."]
+position = Vector2( 368, 216 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 12 )
+
+[node name="Painting1" type="Sprite" parent="."]
+position = Vector2( 82, 174 )
+scale = Vector2( 1.75, 1.75 )
+texture = ExtResource( 11 )
+
+[node name="Painting2" type="Sprite" parent="."]
+position = Vector2( 256, 176 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 13 )
+
+[node name="Painting3" type="Sprite" parent="."]
+position = Vector2( 296, 72 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 13 )
+
+[node name="Doors" parent="." instance=ExtResource( 4 )]
+position = Vector2( 224, 216 )
+
+[node name="Bars" parent="." instance=ExtResource( 7 )]
+position = Vector2( 368, 72 )
+
+[node name="Key" parent="." instance=ExtResource( 8 )]
+position = Vector2( 392, 88 )
+
+[node name="Ladders" type="Node2D" parent="."]
+
+[node name="Ladder" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 160, 216 )
+
+[node name="Ladder2" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 160, 200 )
+
+[node name="Ladder3" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 160, 184 )
+
+[node name="Ladder4" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 160, 168 )
+
+[node name="Ladder5" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 160, 152 )
+
+[node name="Ladder11" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 288, 216 )
+
+[node name="Ladder12" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 288, 200 )
+
+[node name="Ladder13" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 288, 184 )
+
+[node name="Ladder14" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 288, 168 )
+
+[node name="Ladder15" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 288, 152 )
+
+[node name="Ladder6" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 120, 152 )
+
+[node name="Ladder7" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 120, 136 )
+
+[node name="Ladder8" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 120, 120 )
+
+[node name="Ladder9" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 120, 104 )
+
+[node name="Ladder16" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 328, 152 )
+
+[node name="Ladder17" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 328, 136 )
+
+[node name="Ladder18" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 328, 120 )
+
+[node name="Ladder19" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 328, 104 )
+
+[node name="Ladder10" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 120, 104 )
+
+[node name="Ladder20" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 120, 88 )
+
+[node name="Ladder21" parent="Ladders" instance=ExtResource( 5 )]
+position = Vector2( 328, 88 )
+
+[node name="Battery" type="Node2D" parent="."]
+
+[node name="Battery" parent="Battery" instance=ExtResource( 10 )]
+position = Vector2( 56, 216 )
+
+[node name="Lever" parent="." instance=ExtResource( 9 )]
+position = Vector2( 80.4719, 90.631 )
+
+[node name="Player" parent="." instance=ExtResource( 14 )]
+position = Vector2( 192, 208 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 131094, 0, 0, 131095, 0, 1, 131096, 0, 1, 131097, 0, 1, 131098, 0, 2, 196609, 0, 0, 196610, 0, 2, 196630, 0, 131072, 196631, 0, 131073, 196632, 0, 131073, 196633, 0, 65542, 196634, 0, 65538, 262145, 0, 65536, 262146, 0, 65538, 262169, 0, 65536, 262170, 0, 65538, 327681, 0, 65536, 327682, 0, 65538, 327705, 0, 65536, 327706, 0, 65538, 393217, 0, 65536, 393218, 0, 65538, 393220, 0, 196608, 393221, 0, 196609, 393222, 0, 196610, 393237, 0, 196608, 393238, 0, 196609, 393239, 0, 196609, 393240, 0, 196609, 393241, 0, 262150, 393242, 0, 65538, 458753, 0, 65536, 458754, 0, 65538, 458777, 0, 65536, 458778, 0, 65538, 524289, 0, 65536, 524290, 0, 65538, 524313, 0, 65536, 524314, 0, 65538, 589825, 0, 65536, 589826, 0, 65538, 589849, 0, 65536, 589850, 0, 65538, 655361, 0, 65536, 655362, 0, 65538, 655385, 0, 65536, 655386, 0, 65538, 720897, 0, 65536, 720898, 0, 65538, 720921, 0, 65536, 720922, 0, 65538, 786433, 0, 65536, 786434, 0, 65538, 786457, 0, 65536, 786458, 0, 65538, 851969, 0, 65536, 851970, 0, 65538, 851993, 0, 65536, 851994, 0, 65538, 917505, 0, 65536, 917506, 0, 131077, 917507, 0, 1, 917508, 0, 1, 917509, 0, 1, 917510, 0, 1, 917511, 0, 1, 917512, 0, 1, 917513, 0, 1, 917514, 0, 1, 917515, 0, 1, 917516, 0, 1, 917517, 0, 1, 917518, 0, 1, 917519, 0, 1, 917520, 0, 1, 917521, 0, 1, 917522, 0, 1, 917523, 0, 1, 917524, 0, 1, 917525, 0, 1, 917526, 0, 1, 917527, 0, 1, 917528, 0, 1, 917529, 0, 131078, 917530, 0, 65538, 983041, 0, 131072, 983042, 0, 131073, 983043, 0, 131073, 983044, 0, 131073, 983045, 0, 131073, 983046, 0, 131073, 983047, 0, 131073, 983048, 0, 131073, 983049, 0, 131073, 983050, 0, 131073, 983051, 0, 131073, 983052, 0, 131073, 983053, 0, 131073, 983054, 0, 131073, 983055, 0, 131073, 983056, 0, 131073, 983057, 0, 131073, 983058, 0, 131073, 983059, 0, 131073, 983060, 0, 131073, 983061, 0, 131073, 983062, 0, 131073, 983063, 0, 131073, 983064, 0, 131073, 983065, 0, 131073, 983066, 0, 131074 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
